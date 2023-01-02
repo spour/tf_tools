@@ -2,7 +2,7 @@
 tools for deep learning with transcription factors
 
 
-###Evaluation example
+### Evaluation example
 from evaluation_metrics import EvaluationMetrics
 
 true_labels = [[1, 0, 1], [0, 1, 1]]
@@ -11,7 +11,7 @@ objective = "binary"
 
 mean, std = EvaluationMetrics.calculate_metrics(true_labels, predicted_labels, objective)
 
-##Available Metrics
+## Available Metrics
 The following metrics are available for calculation:
 
 Binary classification:
