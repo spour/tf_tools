@@ -22,7 +22,7 @@ def build_model(custom_activation='relu'):
     custom_activation = utility_functions.custom_activation_fn(custom_activation)
 
     # layer 1
-    x = custom_layers.conv_layer(inputs,
+    x = custom_layers.convolutional(inputs,
                               num_filters=24, 
                               kernel_size=19, 
                               padding='same', 
@@ -32,7 +32,7 @@ def build_model(custom_activation='relu'):
                               batch_norm=True)
 
     # layer 2
-    x = custom_layers.conv_layer(x,
+    x = custom_layers.convolutional(x,
                               num_filters=32, 
                               kernel_size=7, 
                               padding='same', 
@@ -44,7 +44,7 @@ def build_model(custom_activation='relu'):
 
 
     # layer 3
-    x = custom_layers.conv_layer(x,
+    x = custom_layers.convolutional(x,
                               num_filters=48, 
                               kernel_size=7, 
                               padding='valid', 
@@ -55,7 +55,7 @@ def build_model(custom_activation='relu'):
     x = keras.layers.MaxPool1D(pool_size=4)(x)
 
     # layer 4
-    x = custom_layers.conv_layer(x,
+    x = custom_layers.convolutional(x,
                                 num_filters=64, 
                                 kernel_size=3, 
                                 padding='valid', 
