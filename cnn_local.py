@@ -1,5 +1,5 @@
 from tensorflow import keras
-from tfomics import layers, utils
+from . import custom_layers, utility_functions
 
 
 def model(activation='relu'):
