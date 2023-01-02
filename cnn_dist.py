@@ -2,7 +2,7 @@ from tensorflow import keras
 from . import custom_layers, utility_functions
 
 
-def model(custom_activation='relu'):
+def build_model(custom_activation='relu'):
     """
     Creates a CNN model for binary classification.
     
