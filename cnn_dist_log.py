@@ -61,7 +61,7 @@ def build_model(activation='log_relu', l2_norm=True):
     x = keras.layers.Activation(activation)(x)
     x = keras.layers.Dropout(dropout_0)(x)
 
-    x = custom_layers.conv_layer(x,
+    x = custom_layers.convolutional(x,
                            num_filters=32, 
                            kernel_size=7, 
                            padding='same', 
@@ -74,7 +74,7 @@ def build_model(activation='log_relu', l2_norm=True):
                                 padding='same'
                                 )(x)
 
-    x = custom_layers.conv_layer(x,
+    x = custom_layers.convolutional(x,
                            num_filters=48, 
                            kernel_size=7, 
                            padding='valid', 
@@ -88,7 +88,7 @@ def build_model(activation='log_relu', l2_norm=True):
                                 )(x)
 
     # layer 2
-    x = custom_layers.conv_layer(x,
+    x = custom_layers.convolutional(x,
                            num_filters=64, 
                            kernel_size=3, 
                            padding='valid', 
