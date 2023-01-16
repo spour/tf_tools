@@ -1,5 +1,5 @@
 # tf_tools
-tools for deep learning with transcription factors
+collection of tools for deep learning with transcription factors
 
 
 ## Evaluation example
